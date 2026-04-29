@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pull Code') {
       steps {
-        git 'https://github.com/josiahjac21/devops-demo.git'
+        git branch: 'main', url: 'https://github.com/josiahjac21/devops-demo.git'
       }
     }
     stage('Deploy') {
