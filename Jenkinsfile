@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh '''
         docker rm -f web || true
-        docker run -d -p 8082:80 -v $(pwd):/usr/share/nginx/html nginx
+        docker run -d --name web -p 8082:80 nginx
         '''
       }
     }
